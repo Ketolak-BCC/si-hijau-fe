@@ -3,6 +3,7 @@ import Hero from "@/features/home/components/Hero";
 import CaraKerja from "@/features/home/components/CaraKerja";
 import Keunggulan from "@/features/home/components/Keunggulan";
 import CTA from "@/features/home/components/CTA";
+import Footer from "@/shared/components/Footer";
 
 const HomeContainer = () => {
   return (
@@ -12,6 +13,7 @@ const HomeContainer = () => {
       <CaraKerja />
       <Keunggulan />
       <CTA />
+      <Footer />
     </>
   );
 };
