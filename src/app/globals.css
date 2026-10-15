@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+:root {
+  --font-jakarta-sans: "Plus Jakarta Sans", sans-serif;
+}
+
 @theme {
   --color-neutral-700: #1f1f1f;
   --color-neutral-600: #4b4b4b;
@@ -58,4 +62,49 @@
   --color-cream-dark-hover: #959391;
   --color-cream-dark-active: #706e6d;
   --color-cream-darker: #575655;
+}
+
+@utility font-jakarta-100 {
+  font-family: var(--font-jakarta-sans), serif;
+  font-weight: 100;
+}
+
+@utility font-jakarta-200 {
+  font-family: var(--font-jakarta-sans), serif;
+  font-weight: 200;
+}
+
+@utility font-jakarta-300 {
+  font-family: var(--font-jakarta-sans), serif;
+  font-weight: 300;
+}
+
+@utility font-jakarta-400 {
+  font-family: var(--font-jakarta-sans), serif;
+  font-weight: 400;
+}
+
+@utility font-jakarta-500 {
+  font-family: var(--font-jakarta-sans), serif;
+  font-weight: 500;
+}
+
+@utility font-jakarta-600 {
+  font-family: var(--font-jakarta-sans), serif;
+  font-weight: 600;
+}
+
+@utility font-jakarta-700 {
+  font-family: var(--font-jakarta-sans), serif;
+  font-weight: 700;
+}
+
+@utility font-jakarta-800 {
+  font-family: var(--font-jakarta-sans), serif;
+  font-weight: 700;
+}
+
+@utility font-jakarta-900 {
+  font-family: var(--font-jakarta-sans), serif;
+  font-weight: 700;
 }
