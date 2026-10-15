@@ -1,5 +1,5 @@
-const page = () => {
-  return <div>dev</div>;
-};
+import HomeContainer from "@/feature/home/containers/HomeContainer";
 
-export default page;
+export default function Home() {
+  return <HomeContainer />;
+}
