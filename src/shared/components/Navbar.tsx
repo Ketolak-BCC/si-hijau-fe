@@ -25,12 +25,12 @@ const Navbar = () => {
       </div>
       <div className="flex items-center gap-10">
         {link.map((item) => (
-          <Link href={item.link} key={item.id}>
+          <Link href={item.link} key={item.id} className="text-[20px]">
             {item.label}
           </Link>
         ))}
         <Button className="bg-green-normal hover:bg-green-normal-hover">
-          Gabung!
+          Daftar SiHijau
         </Button>
       </div>
     </nav>
