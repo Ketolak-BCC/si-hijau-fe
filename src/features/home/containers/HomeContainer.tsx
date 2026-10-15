@@ -1,11 +1,13 @@
 import Navbar from "@/shared/components/Navbar";
-import Hero from "@/feature/home/components/Hero";
+import Hero from "@/features/home/components/Hero";
+import CaraKerja from "@/features/home/components/CaraKerja";
 
 const HomeContainer = () => {
   return (
     <>
       <Navbar />
       <Hero />
+      <CaraKerja />
     </>
   );
 };

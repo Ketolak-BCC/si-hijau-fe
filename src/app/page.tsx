@@ -1,4 +1,4 @@
-import HomeContainer from "@/feature/home/containers/HomeContainer";
+import HomeContainer from "@/features/home/containers/HomeContainer";
 
 export default function Home() {
   return <HomeContainer />;
