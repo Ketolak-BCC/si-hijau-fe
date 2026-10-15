@@ -108,3 +108,15 @@
   font-family: var(--font-jakarta-sans), serif;
   font-weight: 700;
 }
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}
