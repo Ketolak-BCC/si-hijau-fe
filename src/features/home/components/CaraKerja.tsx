@@ -2,7 +2,7 @@ import { caraKerja } from "@/features/home/data/data";
 
 const CaraKerja = () => {
   return (
-    <section className="mt-42 flex flex-col gap-26 px-16">
+    <section id="cara-kerja" className="mt-42 flex flex-col gap-26 px-16">
       <h1 className="font-jakarta-700 text-green-normal text-[48px] leading-20">
         Cara Kerja{" "}
         <span className="bg-green-normal px-4 py-2 text-neutral-50">

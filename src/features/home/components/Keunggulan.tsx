@@ -3,18 +3,18 @@ import Image from "next/image";
 
 const Keunggulan = () => {
   return (
-    <section className="mt-42 flex flex-col gap-26 px-16">
+    <section id="keunggulan" className="mt-42 flex flex-col gap-26 px-16">
       <h1 className="font-jakarta-700 text-green-normal text-center text-[48px] leading-20">
         Keunggulan{" "}
         <span className="bg-green-normal px-4 py-2 text-neutral-50">
           SiHijau
         </span>
       </h1>
-      <div className="flex items-center justify-center gap-6">
+      <div className="flex items-stretch justify-center gap-6">
         {keunggulan.map((item) => (
           <div
             key={item.id}
-            className="bg-green-normal flex flex-col items-center gap-6 rounded-[16px] px-6 py-12"
+            className="bg-green-normal flex flex-1 flex-col items-center gap-6 rounded-[16px] px-6 py-12"
           >
             <Image
               src={item.img}

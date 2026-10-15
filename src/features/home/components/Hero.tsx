@@ -3,7 +3,7 @@ import BackgroundPattern from "@/shared/components/BackgroundPattern";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col gap-8 pt-18">
+    <section id="beranda" className="flex flex-col gap-8 pt-18">
       <h1 className="font-jakarta-700 text-green-normal px-16 text-[48px] leading-20">
         Bingung Kelola Sampah Rumah?
         <br />
