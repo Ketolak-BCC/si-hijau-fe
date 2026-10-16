@@ -1,0 +1,27 @@
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2.4fr) minmax(0, 1fr);
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.mapContainer {
+  position: relative;
+  height: 20rem;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background: #ebeeec;
+}
+
+.panel {
+  min-width: 0;
+  min-height: 10rem;
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 640px) {
+  .mapContainer {
+    height: 24rem;
+  }
+}
