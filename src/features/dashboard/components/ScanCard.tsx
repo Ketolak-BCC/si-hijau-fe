@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { ScanItem } from "../data/dashboard";
-import CategoryBadge from "./CategoryBadge";
-import DetailDialog from "./DetailDialog";
+import CategoryBadge from "@/shared/components/CategoryBadge";
+import DetailDialog from "@/shared/components/DetailDialog";
 export default function ScanCard({ scan }: { scan: ScanItem }) {
   return (
     <article className="overflow-hidden rounded-xl border border-neutral-100 bg-white shadow-sm">

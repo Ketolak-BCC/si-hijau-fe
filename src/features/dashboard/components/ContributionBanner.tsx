@@ -1,4 +1,4 @@
-import CategoryBadge from "./CategoryBadge";
+import CategoryBadge from "@/shared/components/CategoryBadge";
 import Link from "next/link";
 export default function ContributionBanner() {
   return (

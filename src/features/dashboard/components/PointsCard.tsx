@@ -1,5 +1,5 @@
 import { Star } from "lucide-react";
-import DetailDialog from "./DetailDialog";
+import DetailDialog from "@/shared/components/DetailDialog";
 export default function PointsCard({
   points,
   managedWaste,
