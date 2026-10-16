@@ -2,9 +2,15 @@ import Image from "next/image";
 import { MapPin, Navigation } from "lucide-react";
 import type { Mitra } from "../data/mitra";
 import CategoryBadge from "@/shared/components/CategoryBadge";
-import DetailDialog from "@/shared/components/DetailDialog";
+import { Button } from "@/shared/components/ui/button";
 
-export default function MitraCard({ partner }: { partner: Mitra }) {
+export default function MitraCard({
+  partner,
+  onSelect,
+}: {
+  partner: Mitra;
+  onSelect: (mitra: Mitra) => void;
+}) {
   return (
     <article className="flex flex-col overflow-hidden rounded-xl border border-neutral-100 bg-white shadow-sm">
       <div className="relative aspect-[1.85]">
@@ -37,18 +43,13 @@ export default function MitraCard({ partner }: { partner: Mitra }) {
             <CategoryBadge key={category}>{category}</CategoryBadge>
           ))}
         </div>
-        <DetailDialog title={partner.name}>
-          <div className="space-y-4">
-            <p>
-              {partner.city} · {partner.distance}
-            </p>
-            <p>{partner.description}</p>
-            <p>Jenis sampah yang diterima: {partner.categories.join(", ")}.</p>
-            <p className="text-neutral-600">
-              Informasi mitra ini merupakan data contoh.
-            </p>
-          </div>
-        </DetailDialog>
+        <Button
+          variant="outline"
+          className="text-green-normal w-full rounded-xl"
+          onClick={() => onSelect(partner)}
+        >
+          Lihat Detail
+        </Button>
       </div>
     </article>
   );

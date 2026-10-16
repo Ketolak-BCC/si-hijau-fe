@@ -1,7 +1,7 @@
 "use client";
 import dynamic from "next/dynamic";
-import { MousePointerClick, MapPin } from "lucide-react";
-import CategoryBadge from "@/shared/components/CategoryBadge";
+import { MousePointerClick } from "lucide-react";
+import MitraDetailPanel from "./MitraDetailPanel";
 import type { Mitra } from "../data/mitra";
 import styles from "./MitraMapSection.module.css";
 const MitraMap = dynamic(() => import("./MitraMap"), {
@@ -22,7 +22,11 @@ export default function MitraMapSection({
   onSelect: (mitra: Mitra) => void;
 }) {
   return (
-    <section aria-label="Peta lokasi mitra" className={styles.layout}>
+    <section
+      id="mitra-map-section"
+      aria-label="Peta lokasi mitra"
+      className={`${styles.layout} scroll-mt-6`}
+    >
       <div
         className={styles.mapContainer}
         style={{ height: "24rem", minWidth: 0 }}
@@ -31,29 +35,10 @@ export default function MitraMapSection({
       </div>
       <aside
         aria-live="polite"
-        className={`${styles.panel} flex flex-col items-center justify-center rounded-xl bg-white p-5 text-center`}
+        className={`${styles.panel} flex flex-col ${selected ? "items-stretch justify-start" : "items-center justify-center rounded-xl bg-white p-5 text-center"}`}
       >
         {selected ? (
-          <div className="space-y-4">
-            <MapPin className="text-green-normal mx-auto size-6" />
-            <h2 className="font-jakarta-700 text-green-normal">
-              {selected.name}
-            </h2>
-            <p className="text-xs">
-              {selected.city} · {selected.distance}
-            </p>
-            <p className="text-xs leading-relaxed text-neutral-600">
-              {selected.description}
-            </p>
-            <div className="flex flex-wrap justify-center gap-1.5">
-              {selected.categories.map((category) => (
-                <CategoryBadge key={category}>{category}</CategoryBadge>
-              ))}
-            </div>
-            <p className="text-xs text-neutral-500">
-              Lokasi dan jarak merupakan data contoh.
-            </p>
-          </div>
+          <MitraDetailPanel partner={selected} />
         ) : (
           <>
             <MousePointerClick className="text-green-normal mb-3 size-6" />

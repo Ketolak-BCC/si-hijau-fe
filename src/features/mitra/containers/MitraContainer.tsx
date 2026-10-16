@@ -29,7 +29,15 @@ export default function MitraContainer() {
             onSelect={(partner) => setSelectedId(partner.id)}
           />
         </div>
-        <MitraList partners={partners} />
+        <MitraList
+          partners={partners}
+          onSelect={(partner) => {
+            setSelectedId(partner.id);
+            document
+              .getElementById("mitra-map-section")
+              ?.scrollIntoView({ behavior: "smooth", block: "start" });
+          }}
+        />
       </div>
     </div>
   );
