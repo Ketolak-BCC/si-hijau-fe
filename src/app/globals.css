@@ -232,4 +232,9 @@
   html {
     @apply font-sans scroll-smooth;
   }
+  /* Hide native browser password reveal icon */
+  input::-ms-reveal,
+  input::-ms-clear {
+    display: none;
+  }
 }

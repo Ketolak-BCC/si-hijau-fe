@@ -2,36 +2,50 @@
 
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { Button } from "@/shared/components/ui/button";
 import { Field } from "@/shared/components/ui/field";
 import { Input } from "@/shared/components/ui/input";
 import { Label } from "@/shared/components/ui/label";
 
 const EmailInput = () => {
+  const router = useRouter();
+
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+    router.push("/verifikasi-otp");
+  };
+
   return (
-    <div className="relative w-full max-w-[305px] text-black">
+    <div className="w-full text-black">
       <Link
         href="/masuk"
         aria-label="Kembali ke halaman masuk"
-        className="focus-visible:outline-green-normal absolute top-3 -left-9 flex size-6 items-center justify-center rounded-md focus-visible:outline-2 focus-visible:outline-offset-2"
+        className="font-jakarta-500 mb-6 inline-flex items-center gap-1.5 text-sm text-neutral-600 transition-colors hover:text-neutral-900"
       >
         <ChevronLeft className="size-4" aria-hidden="true" />
+        <span>Kembali ke Masuk</span>
       </Link>
 
-      <h1 className="text-lg leading-6 font-semibold">Lupa Password?</h1>
-      <p id="forgot-password-description" className="mt-2 text-xs leading-4">
+      <h1 className="font-jakarta-700 text-2xl text-neutral-900 md:text-[28px]">
+        Lupa Password?
+      </h1>
+      <p
+        id="forgot-password-description"
+        className="font-jakarta-400 mt-2 text-sm text-neutral-600 md:text-base"
+      >
         Masukkan email yang terdaftar di akun kamu untuk menerima kode OTP.
       </p>
 
       <form
-        className="mt-8"
+        className="mt-6 flex flex-col gap-4"
         aria-describedby="forgot-password-description"
-        onSubmit={(event) => event.preventDefault()}
+        onSubmit={handleSubmit}
       >
-        <Field className="gap-1!">
+        <Field className="flex flex-col gap-2">
           <Label
             htmlFor="forgot-password-email"
-            className="text-xs! leading-4! font-normal!"
+            className="font-jakarta-600 text-[16px]"
           >
             Email
           </Label>
@@ -40,14 +54,14 @@ const EmailInput = () => {
             name="email"
             type="email"
             autoComplete="email"
-            placeholder="Placeholder"
+            placeholder="Masukkan email kamu"
             required
-            className="border-green-light-active! focus-visible:border-green-normal focus-visible:ring-green-normal/30 h-[30px]! w-full rounded-lg! border bg-white! px-2.5! py-0! text-xs! placeholder:text-[9px] placeholder:text-neutral-500/60"
+            className="h-12 rounded-xl border-green-light-active border-2 bg-white px-4 text-base"
           />
         </Field>
         <Button
           type="submit"
-          className="hover:bg-green-normal-hover mt-[18px] h-[31px]! w-full rounded-lg! text-[9px]! text-white"
+          className="mt-2 h-12 w-full rounded-xl text-base font-semibold text-white"
         >
           Kirim OTP
         </Button>
@@ -57,3 +71,4 @@ const EmailInput = () => {
 };
 
 export default EmailInput;
+
