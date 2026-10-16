@@ -3,7 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
 import { SidebarTrigger } from "@/shared/components/ui/sidebar";
-import DashboardSection from "../components/DashboardSection";
+import FeatureSection from "@/shared/components/FeatureSection";
 import RewardPointsCard from "../components/RewardPointsCard";
 import VoucherCard from "../components/VoucherCard";
 import { availableRewards, ownedVouchers } from "../data/rewards";
@@ -31,15 +31,15 @@ export default function ClaimRewardContainer() {
           </h1>
         </header>
         <RewardPointsCard />
-        <DashboardSection title="Voucher Kamu">
+        <FeatureSection title="Voucher Kamu">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
             {vouchers.map((voucher) => (
               <VoucherCard key={voucher.id} voucher={voucher} claimed />
             ))}
           </div>
-        </DashboardSection>
+        </FeatureSection>
         <section id="hadiah" className="scroll-mt-6">
-          <DashboardSection title="Hadiah menarik untuk Anda">
+          <FeatureSection title="Hadiah menarik untuk Anda">
             <p role="status" className="text-green-normal text-sm">
               {message ||
                 "Pratinjau voucher — klaim demo tidak mengurangi poin."}
@@ -61,7 +61,7 @@ export default function ClaimRewardContainer() {
                   />
                 ))}
             </div>
-          </DashboardSection>
+          </FeatureSection>
         </section>
       </div>
     </div>

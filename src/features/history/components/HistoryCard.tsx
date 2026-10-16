@@ -1,6 +1,6 @@
 import Image from "next/image";
-import CategoryBadge from "@/features/dashboard/components/CategoryBadge";
-import DetailDialog from "@/features/dashboard/components/DetailDialog";
+import CategoryBadge from "@/shared/components/CategoryBadge";
+import DetailDialog from "@/shared/components/DetailDialog";
 import type { HistoryScan } from "../data/history";
 
 export default function HistoryCard({ scan }: { scan: HistoryScan }) {

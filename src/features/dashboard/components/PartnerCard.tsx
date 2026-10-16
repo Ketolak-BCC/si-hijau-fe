@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { MapPin, Navigation } from "lucide-react";
 import type { Partner } from "../data/dashboard";
-import CategoryBadge from "./CategoryBadge";
-import DetailDialog from "./DetailDialog";
+import CategoryBadge from "@/shared/components/CategoryBadge";
+import DetailDialog from "@/shared/components/DetailDialog";
 
 export default function PartnerCard({ partner }: { partner: Partner }) {
   return (

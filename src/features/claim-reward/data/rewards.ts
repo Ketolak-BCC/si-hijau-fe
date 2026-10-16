@@ -22,3 +22,5 @@ export const availableRewards: Voucher[] = Array.from(
     code: `HIJAU-REWARD-00${index + 1}`,
   }),
 );
+
+export const rewardSummary = { points: 100, managedWaste: 128 };

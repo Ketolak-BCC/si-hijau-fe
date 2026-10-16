@@ -1,7 +1,7 @@
 import { Button } from "@/shared/components/ui/button";
 import type { Voucher } from "../data/rewards";
 import VoucherArtwork from "./VoucherArtwork";
-import DetailDialog from "./DetailDialog";
+import DetailDialog from "@/shared/components/DetailDialog";
 interface VoucherCardProps {
   voucher: Voucher;
   claimed: boolean;

@@ -1,6 +1,6 @@
 import { Star } from "lucide-react";
 import Link from "next/link";
-import { dashboardSummary } from "../data/dashboard";
+import { rewardSummary } from "../data/rewards";
 export default function RewardPointsCard() {
   return (
     <section
@@ -23,10 +23,10 @@ export default function RewardPointsCard() {
       <div className="flex-1">
         <p className="text-xs uppercase">Poin Anda</p>
         <p className="font-jakarta-700 mt-1 text-3xl text-black">
-          {dashboardSummary.points} Poin
+          {rewardSummary.points} Poin
         </p>
         <p className="mt-4 max-w-md text-sm leading-relaxed">
-          Kamu sudah menyalurkan lebih dari {dashboardSummary.managedWaste} kg
+          Kamu sudah menyalurkan lebih dari {rewardSummary.managedWaste} kg
           sampah organik.
           <br />
           Kamu menghemat gas emisi karbon dari dunia!
