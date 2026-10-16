@@ -1,5 +1,5 @@
 import CategoryBadge from "./CategoryBadge";
-import DetailDialog from "./DetailDialog";
+import Link from "next/link";
 export default function ContributionBanner() {
   return (
     <div className="flex flex-col gap-6 rounded-xl border border-neutral-100 bg-white p-6 sm:flex-row sm:items-center sm:justify-between">
@@ -14,16 +14,12 @@ export default function ContributionBanner() {
         </p>
       </div>
       <div className="shrink-0 sm:w-44">
-        <DetailDialog
-          title="Buktikan Aksi Hijaumu"
-          label="Mau buktikan!"
-          primary
+        <Link
+          href="/beranda/klaim-reward"
+          className="bg-green-normal hover:bg-green-normal-hover focus-visible:outline-green-normal flex h-12 items-center justify-center rounded-xl px-6 text-sm font-medium text-white transition-colors focus-visible:outline-2 focus-visible:outline-offset-2"
         >
-          <p>
-            Siapkan foto hasil pengolahan sampahmu. Pengiriman bukti dan
-            pemberian poin akan tersedia setelah layanan verifikasi terhubung.
-          </p>
-        </DetailDialog>
+          Mau buktikan!
+        </Link>
       </div>
     </div>
   );
